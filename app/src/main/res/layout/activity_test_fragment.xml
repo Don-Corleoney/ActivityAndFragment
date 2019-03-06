@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TestFragmentActivity">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="cn.edu.hqu.cst.activityandfragment.view.fragment.FirstFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/tvLabel"
+        android:text="@string/intro"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/firstFragment"
+        />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="cn.edu.hqu.cst.activityandfragment.view.fragment.SecondFragment"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        />
+</android.support.constraint.ConstraintLayout>

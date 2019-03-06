@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="set_location"
+        android:title="@string/my_location" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="apply_wireless"
+        android:summary="@string/apply_wireless_summary"
+        android:title="@string/apply_wireless"></CheckBoxPreference>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="apply_gps"
+        android:summary="@string/apply_gps_summary"
+        android:title="@string/apply_gps"></CheckBoxPreference>
+    <PreferenceCategory android:title="@string/wireless_network_setting"></PreferenceCategory>
+    <CheckBoxPreference
+        android:key="apply_fly"
+        android:summary="@string/apply_fly_summary"
+        android:title="@string/apply_fly">
+
+    </CheckBoxPreference>
+    <CheckBoxPreference
+        android:key="apply_wifi"
+        android:summary="@string/wifi_summary"
+        android:title="@string/wifi"></CheckBoxPreference>
+    <Preference
+        android:dependency="apply_wifi"
+        android:key="wifi_setting"
+        android:summary="@string/wifi_setting_summary"
+        android:title="@string/wifi_setting">
+        <!-- 点击时 自定义一个默认跳转Intent  action指定隐式Intent -->
+        <!-- action指定隐式Intent ; targetPackage和targetClass指定显示Intent-->
+        <intent android:action="android.settings.WIFI_SETTINGS" />
+    </Preference>
+    <CheckBoxPreference
+        android:key="apply_bluetooth"
+        android:summary="@string/bluetooth_summary"
+        android:title="@string/bluetooth"></CheckBoxPreference>
+    <Preference
+        android:dependency="apply_bluetooth"
+        android:key="bluetooth_setting"
+        android:summary="@string/blue_tooth_setting_summary"
+        android:title="@string/bluetooth_setting"></Preference>
+</PreferenceScreen>

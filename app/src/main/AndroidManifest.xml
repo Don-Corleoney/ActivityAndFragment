@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.hqu.cst.activityandfragment">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.IntentActivity" />
+        <activity android:name=".view.DynamicFragmentActivity" />
+        <activity android:name=".view.TestFragmentActivity" />
+        <activity android:name=".view.WithResultActivity" />
+        <activity android:name=".view.NoResultActivity" />
+        <activity android:name=".view.TestStartActivity" />
+        <activity android:name=".view.LifeCycleActivity" />
+        <activity android:name=".view.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.DemoListActivity" />
+        <activity android:name=".view.DemoPreferenceActivity" />
+        <activity android:name=".view.DemoExpandableListActivity" />
+    </application>
+
+</manifest>
